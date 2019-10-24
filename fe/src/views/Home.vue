@@ -95,9 +95,15 @@
           chipMsg="HOT"
         ></board-card>
       </v-flex>
-      <v-flex xs12>
+      <v-flex xs12 lg8>
         <v-card dark class="mx-auto">
-          <v-img dark src="@/assets/banner2.png" max-height="200">
+          <v-img dark src="@/assets/price.jpg" height="200">
+          </v-img>
+        </v-card>
+      </v-flex>
+      <v-flex xs12 lg4>
+        <v-card dark class="mx-auto">
+          <v-img dark src="@/assets/advertise.jpg" height="200">
           </v-img>
         </v-card>
       </v-flex>

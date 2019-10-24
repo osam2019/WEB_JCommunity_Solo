@@ -1,7 +1,7 @@
 <template>
   <v-container fluid grid-list-md>
     <v-layout row wrap>
-      <v-flex xs12 lg12>
+      <v-flex class="ma-5" xs12 lg10>
         <v-card>
           <v-toolbar class="elevation-0" dark src="@/assets/wide_background.jpg">
             <div class="title">마음의 편지함</div>

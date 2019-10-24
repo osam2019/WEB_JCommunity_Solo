@@ -37,7 +37,7 @@
 
 최근 대학생들 사이에서는 **대나무숲**이라는 학교 별 SNS 게시판이 유행입니다 한 전래동화에서는 `임금님 귀는 당나귀 귀!` 라는 남들에게 말 못할 이야기를 대나무숲에 외쳤던 신하의 이야기가 나옵니다. 대학생들도 전래동화처럼 마음 속 이야기를 털어 놓을 수 있는 공간이 필요했고, **OO대 대나무숲(O대숲)** 과 같은 SNS상의 공간을 만들어냈습니다. 각 중대에도 대나무숲과 같은 플랫폼이 필요하다고 생각했고, "중대"와 "대나무숲"을 결합한 "중대숲"이라는 이름을 고안하게 되었습니다.
 
-![중대숲 메인 대시보드](https://lh3.googleusercontent.com/AE4ImXGxAUlcWoS4_Fk3PKqNgB4Xq2PkBetCF_YzX-De4LzuDfoyZ_lOvUX8GvdD8cBakV3eS5g=s1000)
+![중대숲 메인 대시보드](https://lh3.googleusercontent.com/lYDIiUTAM9Jw2joRzdGsSemZKszNCfsBRUHhNq18VPey-b0p3PKz9tm9GCiUppnk3akA3ekQI5M3=s1000)
 
 이후 중대 단위의 페이지가 있다면 온라인 소통이 가능할 뿐만 아니라  중대 운영에 도움이 되는 다양한 기능을 구현할 수 있겠다는 생각을 하게 되었습니다.  각 중대와 매칭되는 모델을 설계했고, **대시보드 형태의 메인페이지**를 구상하게 되었습니다. 중대별 페이지에서는 복귀보고체계, 출타종합체계, 중대원 질병 관리 체계, 건의사항, 마음의편지, 공지사항 등의 서비스를 사용할 수 있도록 할 것입니다.
 
@@ -98,7 +98,8 @@
 - 유효성 검사를 구현해(VeeValidate사용) 데이터 노이즈를 방지한다.
 
 #### 3. 메인 대시보드
-![중대 메인 대시보드](https://lh3.googleusercontent.com/MbWC_PmyN3O_HheZEQp2jG3Wkpai89t5QeONZQY4fiIEzJ7XqF3MfUPhcaHcTwXcNaZ5e2HfvDY=s1000)
+
+![중대숲 메인 대시보드](https://lh3.googleusercontent.com/lYDIiUTAM9Jw2joRzdGsSemZKszNCfsBRUHhNq18VPey-b0p3PKz9tm9GCiUppnk3akA3ekQI5M3=s1000)
 
 중대의 메인 대시보드이다. 
 - 좌측 Navigation의 메뉴를 이용해 다양한 서비스로 접근이 가능하다. 
@@ -108,7 +109,8 @@
 - 하단에는 광고를 게제할 수 있는 배너가 존재한다.(군 관련 광고 게제 가능)
 
 #### 4. 마음의 편지 작성
-![마음의편지 작성 다이얼로그](https://lh3.googleusercontent.com/_BjsxiIfSR9oGjcgpduLoHCgMjo7jJS2zBo7jRCKa6Uwp1hk8LF2tb7m0WAj1d1EnCRotYaL9uQ=s500)
+
+![마음의 편지 작성](https://lh3.googleusercontent.com/MD0a-Fffk1I4gHddGLTvUiXPS0tV8BYbi1EF_l_np_whGR13vHmOOCAwjSuZJv5JRqNXfOXlqkvt=s1000)
 
 마음의 편지 작성 다이얼로그 이다.
 - 하단의 메세지 형태의 버튼을 누르면 중대숲 어디서나 마음의 편지를 작성할 수 있다.
@@ -116,13 +118,14 @@
 
 #### 5. 마음의 편지함
 
-![enter image description here](https://lh3.googleusercontent.com/m_sqrm1YQ8OtLEiPIytY8OIBUvF90gWMndoHja-e8pIX6gQH4Q4J9eNmTOiEbanuMrFl7r0FMTFZ=s1000)
+![마음의 편지함](https://lh3.googleusercontent.com/fXijCZRAkdKud8kvxH3YM1YTBTTy8juR1mnCfX-FfM6E4u9VttKg3sm0bivmmTOWfgOi_BPc7_Ye=s1000)
 
 중대 마음의 편지함이다. 
 - 간부만 접근 가능하다.(API에서 page권한을 확인 후 허가시에만 접근가능)
 - 날짜순으로 정렬이 가능하다.
 
 #### 6. 마음의 편지
+
 ![마음의편지](https://lh3.googleusercontent.com/FlmgsLTZgVb-86JMRkpL_eepUkY71lz7O6wEmA3EFLcPQLhqyiLHI_2YBH8_J3mx8JFJzBlqSYU=s500)
 
 마음의 편지이다.
@@ -132,7 +135,8 @@
 - 간부만 조회 및 삭제가 가능하다(API 미들웨어에서 권한 확인 후 호출 허용)
 
 #### 7. 공지사항
-![공지사항 리스트](https://lh3.googleusercontent.com/zWk5JlnwuLGhIT4ZsAb28LQWw7qme2KyZt6mQ286mer6YAhrpvRFGBNK5oZVVlrEmtuRz4Nq9i4=s1000)
+
+![공지사항 리스트](https://lh3.googleusercontent.com/eyK1rwguyMajSRS2myB0J665t4rd3EWxu_Uwuc4hO875LOO4dy7ci_l57aQEAXERWU8LxKAwPxcR=s1000)
 
 공지사항 리스트이다.
 - 공지사항을 확인할 수 있다. 
@@ -141,14 +145,16 @@
 - 각 게시물은 편지와 같은 컴포넌트로 구성되었다.
 
 #### 8. 건의사항 리스트
-![건의사항 리스트](https://lh3.googleusercontent.com/KbiLLguu8GpOY9qD7s7ap5oDN4fc6aK4lDUHd1BRiVAOFOIz6NjsSPQhDAl6xdHsbdyc2_AZC6lW=s1000)
+
+![건의사항 리스트](https://lh3.googleusercontent.com/omjOt7BB-G0dAvfs-0qfZSANfc4_VG_IE-dp9gLe3zP9hpS06BhECcTy0jXpyEHjA3iIbcqfVCMa=s1000)
 
 건의사항 리스트이다. 
 - 글쓴이, 조회수, 추천, 날짜 순으로 정렬이 가능하다. 
 - 병사 이상의 권한이면 글을 작성할 수 있다.
 
 #### 9. 건의사항
-![건의사항](https://lh3.googleusercontent.com/qWX7PF346_67lYekqzLwQau2hj8Q6gzkvZXuU1TwNJNXPCuLa51B7_6QAks5Yu6CsS_xBNqJ_JtW=s1000)
+
+![건의사항 아이템](https://lh3.googleusercontent.com/Ad4sK9-QD3wKj2Te9llyG1f-ljd8d3tLAyYaFaVx3rFAodMCwnyN-6o_TLBZcS4VhHdQwYImQ2Pp=s1000)
 
 건의사항이다. 
 - 건의사항과 관련된 내용이 카드에 출력되며 좋아요를 누를 수 있다. 
@@ -182,6 +188,29 @@
 - 복귀정보확인의 버튼그룹을 통해 몇번 보고까지 완료했는지 한눈에 확인이 가능하다.  
 - 복귀정보확인의 각 버튼은 해당 보고 정보를 확인할 수 있다.
 - 보고자 목록은 API에서 currentType(완료된 보고종류)에 따라 오름차순으로 정렬된다  (3보고가 완료된 보고자가 가장 아래에 위치)
+
+#### 12. Manage 메뉴들
+
+![사용자관리](https://lh3.googleusercontent.com/4zgWi9U5KBJhrbvvelkOegjadG0IblFKm6AS7JbIFIrgh-2YQEd8s3p7AtFShGkxRXgRhgY4mq1z=s1000)
+
+사용자 관리 메뉴이다
+- 권한이 0인 사용자만 접근이 가능하다
+- 다른 유저의 정보를 수정 및 삭제할 수 있다.(이름, 군번, 부대, 권한 등)
+- 관리자 = 0, 간부 = 1, 병사 = 2, 비로그인 = 3 으로 권한을 분류한다.
+
+![enter image description here](https://lh3.googleusercontent.com/eaGCwqZz8KQIEkwK7WO1o86SoINFGWtSGbVpF2DGbGU4UsyMjgF69ccDcTsGd1tGEM09riutC89T=s1000) 
+
+부대 관리 메뉴이다.
+- 권한이 0인 사용자만 접근이 가능하다.
+- 부대를 생성, 수정, 삭제할 수 있다.
+
+![enter image description here](https://lh3.googleusercontent.com/awJqpqCvoPnW99I2m_Kn_HAXF3A_IIoJGpOCW5rQFaM0lfwYkEZ0nuOrLA0jc2IxLvw01FLnjUd6=s1000)
+
+페이지 관리 메뉴이다.
+- 권한이 0인 사용자만 접근이 가능하다.
+- 페이지 권한을 수정할 수 있다.
+- 자동적으로 생성되며 이 페이지 데이터를 이용해 유저와 해당 페이지의 권한을 비교한다.( 프론트 단에서의 접근 제어 위함)
+
 
 
 # Document
