@@ -1,6 +1,5 @@
 # 중대숲(JCommunity)
 
-
 ![](https://lh3.googleusercontent.com/AiExm3VLAumnh5GPm6Hju-4K08awkcDuMy10y3aBQLjUot_WxtsqmPg7p_9MVMwkLfon2oVNb7M)
 
 중대숲은 **중대 내 소통 플랫폼** 입니다.  
@@ -15,6 +14,11 @@
 
 과 같은 정말 많은 서비스를 이용할 수 있습니다.
 앞으로도 발전할 중대숲을 기대해 주세요!!
+<br />
+
+> 서버 정보는 여기로
+ ### [서버 기술 문서](/be/README.md)
+
 
 ## 일반 현황
  - 2019 국방부오픈소스아카데미 공개SW 집체교육 WEB분야 산출물
@@ -111,7 +115,8 @@
 - 수정이 불가능하므로, 부적절한 내용을 작성하지 말라는 주의 문구가 있다.
 
 #### 5. 마음의 편지함
-![마음의 편지함](https://lh3.googleusercontent.com/baHQA_oHlpAhVRTkTw4TLHBIoF1dJ9j_Q56jG7eo_wWIvZRyUq6u-aeE-zU901tu4rgUclhMv1A=s1000)
+
+![enter image description here](https://lh3.googleusercontent.com/m_sqrm1YQ8OtLEiPIytY8OIBUvF90gWMndoHja-e8pIX6gQH4Q4J9eNmTOiEbanuMrFl7r0FMTFZ=s1000)
 
 중대 마음의 편지함이다. 
 - 간부만 접근 가능하다.(API에서 page권한을 확인 후 허가시에만 접근가능)
@@ -153,7 +158,8 @@
 - 댓글은 200자 제한이다.
 
 #### 10. 복귀보고체계
-![복귀보고체계](https://lh3.googleusercontent.com/Yc2dKr4IUAFMjYj2Wy_LaVbjb5eXHNNUK1BEspPvieJlhwiBkR4kNILtDG7gflYe9Ph7YPOm463C=s1000)
+
+![enter image description here](https://lh3.googleusercontent.com/oR-dPjcQ_ey_GOOsEooQxttXUL-Dr7ML6UsyCesJnbK_N4F4e5p2qjXXfF3JfW9MmGe00tL4dQC2=s1000)
 
 복귀보고체계 서비스이다. 
 - 복귀 보고의 경우에는 날짜, 부대, 유저, 1보고, 2보고, 3보고, 현재 보고 타입을 담은 모델을 통해 이루어진다. 
@@ -167,7 +173,8 @@
 - 각 보고를 할 때마다 우측에 복귀 정보가 표시되며, 복귀가 완료된 뒤에는 보고 버튼이 복귀완료 버튼으로 바뀌게 된다. 
 
 #### 11. 중대원 복귀 현황
-![중대원 복귀 현황](https://lh3.googleusercontent.com/iS4Y2IJHCJ6g1nfqzy1VkAqJN-bhS2rPRBBsbSiUMJ8JXsr6Is0AxH768rAdA73kZ8kmSYbL5_Ml=s1000)
+
+![enter image description here](https://lh3.googleusercontent.com/fZimntZcuI9lK9JN3bgyeZW5BhcdAFFrVnKaF5u0SCXFXQjAf5jclYvWvW4SZnanyFvPafvhtowV=s1000)
 
 중대원들의 복귀현황을 파악할 수 있다.
 - 상단에 위치한 3가지 chip을 통해 오늘날짜, 복귀중인 인원, 복귀 정보가 로드된 시간을 알 수 있다.
@@ -176,8 +183,6 @@
 - 복귀정보확인의 각 버튼은 해당 보고 정보를 확인할 수 있다.
 - 보고자 목록은 API에서 currentType(완료된 보고종류)에 따라 오름차순으로 정렬된다  (3보고가 완료된 보고자가 가장 아래에 위치)
 
-
-- - -
 
 # Document
 ## 기술 스택
