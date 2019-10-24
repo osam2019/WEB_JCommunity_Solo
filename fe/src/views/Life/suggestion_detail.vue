@@ -68,7 +68,7 @@
       <v-divider></v-divider>
 
       <v-flex class="pa-3">
-        <v-alert type="warning" v-if="comments.length === 0">
+        <v-alert type="warning" color="grey" width="90%" v-if="comments.length === 0">
             아직 댓글이 없습니다
         </v-alert>
       </v-flex>

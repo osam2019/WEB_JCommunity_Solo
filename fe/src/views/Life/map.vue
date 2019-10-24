@@ -2,24 +2,57 @@
   <v-container grid-list-md>
     <v-layout row wrap>
       <v-flex xs12>
-        <v-card color="grey lighten-3" class="elevation-0">
+        <v-toolbar class="ml-8 mt-1 mb-n10" style="z-index:1" width="200" height="60px" dark>
+          <v-toolbar-title>
+            <div class="ml-3 body-1 font-weight-thin">
+              복귀 보고 체계
+              <v-icon right>my_location</v-icon>
+            </div>
+          </v-toolbar-title>
+          <v-spacer></v-spacer>
+        </v-toolbar>
+        <v-card color="grey lighten-1" class="elevation-0" dark>
           <v-card-text>
+          </v-card-text>
+          <v-card-text>
+          </v-card-text>
+           <v-card-text class="ml-5">
+            <div>
+              <span>
+                <v-chip color="grey darken-1" class="mr-3" label>
+                  <v-icon left>today</v-icon>
+                  {{today}}
+                </v-chip>
+              </span>
+              <span>
+                <v-chip color="green darken-3" class="mr-3" label>
+                  <v-icon left>where_to_vote</v-icon>
+                  {{myMarker.loc.region}}
+                </v-chip>
+              </span>
+              <span>
+                <v-chip color="lime darken-3" class="mr-3" label>
+                  <v-icon left>replay</v-icon>
+                  {{timeNow}}
+                </v-chip>
+              </span>
+            </div>
           </v-card-text>
           <v-layout wrap row>
             <v-flex xs12 lg6 class="pa-6">
-              <v-toolbar prominent class="ml-5 mb-n10" style="z-index:2" width="90%" height="80px">
-                <div class="ma-4">
-                  <div class="title font-weight-thin">Map<v-chip class="ml-5">{{myMarker.loc.region}}</v-chip></div>
-                </div>
+              <v-toolbar prominent class="ml-5 elevation-0" style="z-index:2; margin-bottom: -90px" width="150" height="70px" dark>
                 <v-spacer></v-spacer>
-                <div class="mt-4">
-                  <div v-if="comebackInfo.currentType > 2" class="ml-3">
-                    <v-btn disabled>복귀완료</v-btn>
+                <div class="mt-3">
+                  <div v-if="comebackInfo.currentType > 2">
+                    <v-btn disabled>
+                      복귀완료
+                      <v-icon right>where_to_vote</v-icon>
+                    </v-btn>
                   </div>
                   <div v-else>
-                    <v-btn dark class="elevation-1 ml-3" color="grey" @click="postComeback">
-                      <span class="body-1 mr-1">보고</span>
-                      <v-icon>where_to_vote</v-icon>
+                    <v-btn dark class="elevation-1" color="blue-grey" @click="postComeback">
+                      <span class="body-1">보고하기</span>
+                      <v-icon right>where_to_vote</v-icon>
                     </v-btn>
                   </div>
                 </div>
@@ -37,39 +70,42 @@
                 </vue-daum-map>
               </v-card>
             </v-flex>
-            <v-flex xs12 lg6 class="pa-6">
-              <v-card class="elevation-0" color="grey lighten-3">
+            <v-flex xs12 lg6 class="px-6">
+              <v-card class="elevation-0" dark>
                 <v-card-title class="px-6" width="100">
+                  <div class="mr-6 mb-6"><v-chip label large>현재위치 검색</v-chip></div>
                   <v-text-field
                       v-model="keyWord"
-                      label="현재 위치를 키워드로 검색해보세요!"
+                      label="KeyWord"
                       outlined
                       appendIcon="search"
                       dense
                   ></v-text-field>
                 </v-card-title>
                 <v-card-text v-if="!notComeback">
-                  <v-flex xs12 class="pa-2" v-if="comebackInfo.firstLoc.region">
+                  <v-flex xs12 class="pa-2 mt-1" v-if="comebackInfo.firstLoc.region">
                     <comeback-card
-                      title="First"
+                      title="1보고 정보"
                       :loc="comebackInfo.firstLoc"
                     ></comeback-card>
+                    <v-divider></v-divider>
                   </v-flex>
-                  <v-flex xs12 class="pa-2" v-if="comebackInfo.secondLoc.region">
+                  <v-flex xs12 class="px-2" v-if="comebackInfo.secondLoc.region">
                     <comeback-card
-                      title="Second"
+                      title="2보고 정보"
                       :loc="comebackInfo.secondLoc"
                     ></comeback-card>
+                    <v-divider></v-divider>
                   </v-flex>
-                  <v-flex xs12 class="pa-2" v-if="comebackInfo.thirdLoc.region">
+                  <v-flex xs12 class="px-2" v-if="comebackInfo.thirdLoc.region">
                     <comeback-card
-                      title="Third"
+                      title="3보고 정보"
                       :loc="comebackInfo.thirdLoc"
                     ></comeback-card>
                   </v-flex>
                 </v-card-text>
                 <v-card-text v-else>
-                  <v-alert type="warning">아직 복귀를 시작하지 않았습니다</v-alert>
+                  <v-alert type="warning" color="grey">아직 복귀를 시작하지 않았습니다</v-alert>
                 </v-card-text>
               </v-card>
             </v-flex>
@@ -130,11 +166,14 @@ export default {
       markers: [],
       keyWord: null, // 검색 area에 바인딩될 keyword
       notComeback: true,
-      comebackInfo: {}
+      comebackInfo: {},
+      today: '',
+      timeNow: '',
     }
   },
   mounted () {
     this.getComeback()
+    this.getTime()
   },
   watch: {
     keyWord: {
@@ -247,6 +286,10 @@ export default {
         .catch((e) => {
           if (!e.response) this.$store.commit('pop', { msg: e.message, color: 'error' })
         })
+    },
+    getTime () {
+      this.today = moment().format('YYYY.MM.DD')
+      this.timeNow = moment().format('hh:mm:ss a')
     },
     delay () {
       clearTimeout(this.timeout)

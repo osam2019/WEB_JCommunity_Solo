@@ -7,20 +7,20 @@
           class="mx-auto"
         >
           <v-parallax
-              dark
-              src="@/assets/wide_background.jpg"
-              height="250"
+            dark
+            src="@/assets/wide_background.jpg"
+            height="250"
+          >
+            <v-row
+              align="center"
+              justify="center"
             >
-              <v-row
-                align="center"
-                justify="center"
-              >
-                <v-col class="text-center" cols="12">
-                  <h1 class="display-1 font-weight-thin mb-4">Dashboard</h1>
-                  <h4 class="subheading">{{$store.state.user.company}}</h4>
-                </v-col>
-              </v-row>
-            </v-parallax>
+              <v-col class="text-center" cols="12">
+                <h1 class="display-1 font-weight-thin mb-4">Dashboard</h1>
+                <h4 class="subheading">{{$store.state.user.company}}</h4>
+              </v-col>
+            </v-row>
+          </v-parallax>
         </v-card>
       </v-flex>
       <v-flex xs12 sm6 md3 class="pb-2">
