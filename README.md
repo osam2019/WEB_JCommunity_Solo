@@ -268,7 +268,8 @@ if(!e.response) this.$store.commit('pop', { msg: e.message, color: 'error' })
 - ` $ cd WEB_JCommunity_Solo`
 #### 2. vue build
 - `$ cd fe`
-- `$ yarn` 
+- `$ yarn`
+- `$ yarn build`
 #### 3. node module install
 - `$ cd ../be`
 - `$ yarn `
